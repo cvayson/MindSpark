@@ -1,11 +1,11 @@
-package com.test.demo.Model;
+package com.test.demo.Payload;
 
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class Question {
+public class QuestionSaveRequest {
 
     String questionText;
     List<String>answers;

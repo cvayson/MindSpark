@@ -1,6 +1,6 @@
 package com.test.demo.Controller;
 
-import com.test.demo.Model.Question;
+import com.test.demo.Payload.QuestionSaveRequest;
 import com.test.demo.Service.ChatGptService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +21,7 @@ public class ChatGptController {
     }
 
     @GetMapping("/get_response/{fileName}")
-    public List<Question> getResponse(@PathVariable String fileName) throws IOException {
+    public List<QuestionSaveRequest> getResponse(@PathVariable String fileName) throws IOException {
         String filePath="/home/emir/Downloads/"+fileName;
         return this.service.generateQuestionsAndAnswers(filePath);
     }
